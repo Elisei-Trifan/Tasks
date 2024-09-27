@@ -58,3 +58,20 @@ function accum(s) {
 }
 
 console.log(accum('djmsun'))
+
+function digitalRoot(n) {
+  a = n
+    .toString()
+    .split('')
+    .map(Number)
+    .reduce((acc, item) => {
+      return acc + item
+    }, 0)
+  if (a < 10) {
+    return a
+  } else if (a >= 10) {
+    return digitalRoot(a)
+  }
+}
+
+console.log(digitalRoot(49))
