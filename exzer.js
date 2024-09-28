@@ -83,6 +83,53 @@
 
 // console.log(getCount('asfwrooodgw'))
 
-console.log('helloaAa'.match(/[ao]/gi).length)
+// console.log('helloaAa'.match(/[ao]/))
 
-console.log('a aa aaa aaaa'.split(' '))
+// console.log('a aa aaa aaaa'.split(' '))
+
+// console.log('Привет, как дела, у тебя?'.search(/[как]/gi))
+
+// function vaporcode(string) {
+//   return string
+//     .replace(/\s+/g, '')
+//     .split('')
+//     .map((item) => item.toUpperCase())
+//     .join('  ')
+// }
+
+// console.log(vaporcode('hello   hello'))
+
+// let b = 0
+// function persistence(num) {
+//   if (num < 10) {
+//     return 0
+//   }
+
+//   let a = num
+//     .toString()
+//     .split('')
+//     .map(Number)
+//     .reduce((acc, item) => (acc = acc * item), 1)
+//   b++
+
+//   if (a < 10) {
+//     return a
+//   } else if (a > 9) {
+//     persistence(a)
+//   }
+//   return b
+// }
+
+function persistence(num) {
+  let count = 0
+  while (num.toString().length > 1) {
+    num = num
+      .toString()
+      .split('')
+      .reduce((acc, el) => (acc *= +el), 1)
+    count++
+  }
+  return count
+}
+
+console.log(persistence(1435563))
