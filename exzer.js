@@ -119,13 +119,24 @@
 //   console.log(row[i - 1])
 // }
 
-const value = prompt('Введите число')
-const number = Number(value)
+// const value = prompt('Введите число')
+// const number = Number(value)
 
-if (!isNaN(number)) {
-  for (let i = 1; i <= 10; i++) {
-    console.log(`${number} * ${i} = ${number * i}`)
-  }
-} else {
-  console.log(`Это буква ${value}, а не число`)
+// if (!isNaN(number)) {
+//   for (let i = 1; i <= 10; i++) {
+//     if (number === 0) {
+//       console.log(`Это  ${number}, такой таблицы нет`)
+//       break
+//     }
+//     console.log(`${number} * ${i} = ${number * i}`)
+//   }
+// } else {
+//   console.log(`Это буква ${value}, а не число`)
+// }
+
+function arrayDiff(a, b) {
+  return a.filter((item) => b.includes(item))
 }
+
+//   return [...a, ...b].filter((item, index, arr) => item)
+console.log(arrayDiff([1, 2, 2], [1]))
