@@ -153,3 +153,21 @@ function narcissistic(value) {
 }
 
 console.log(narcissistic(153))
+
+// function count(string) {
+//   let count = {}
+//   string.split('').forEach((item) => {
+//     count[item] ? count[item]++ : (count[item] = 1)
+//   })
+//   return count
+// }
+
+function count(string) {
+  let count = {}
+  string
+    .split('')
+    .forEach((item) => (count[item] ? count[item]++ : (count[item] = 1)))
+  return count
+}
+
+console.log(count2('ппривет'))
