@@ -99,37 +99,33 @@
 
 // console.log(vaporcode('hello   hello'))
 
-// let b = 0
 // function persistence(num) {
-//   if (num < 10) {
-//     return 0
+//   let count = 0
+//   while (num.toString().length > 1) {
+//     num = num
+//       .toString()
+//       .split('')
+//       .reduce((acc, el) => (acc *= +el), 1)
+//     count++
 //   }
-
-//   let a = num
-//     .toString()
-//     .split('')
-//     .map(Number)
-//     .reduce((acc, item) => (acc = acc * item), 1)
-//   b++
-
-//   if (a < 10) {
-//     return a
-//   } else if (a > 9) {
-//     persistence(a)
-//   }
-//   return b
+//   return count
 // }
 
-function persistence(num) {
-  let count = 0
-  while (num.toString().length > 1) {
-    num = num
-      .toString()
-      .split('')
-      .reduce((acc, el) => (acc *= +el), 1)
-    count++
-  }
-  return count
-}
+// console.log(persistence(1435563))
 
-console.log(persistence(1435563))
+// const row = ['a', 'b', 'c']
+
+// for (let i = row.length; i > 0; i--) {
+//   console.log(row[i - 1])
+// }
+
+const value = prompt('Введите число')
+const number = Number(value)
+
+if (!isNaN(number)) {
+  for (let i = 1; i <= 10; i++) {
+    console.log(`${number} * ${i} = ${number * i}`)
+  }
+} else {
+  console.log(`Это буква ${value}, а не число`)
+}
