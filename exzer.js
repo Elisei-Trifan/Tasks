@@ -134,9 +134,22 @@
 //   console.log(`Это буква ${value}, а не число`)
 // }
 
-function arrayDiff(a, b) {
-  return a.filter((item) => !b.includes(item))
+// function arrayDiff(a, b) {
+//   return a.filter((item) => !b.includes(item))
+// }
+
+// //   return [...a, ...b].filter((item, index, arr) => item)
+// console.log(arrayDiff([1, 2, 2], [1]))
+
+function narcissistic(value) {
+  const num = [...value.toString()].map(Number)
+  return value ===
+    num.reduce(
+      (acc, item, _, arr) => (acc = acc + Math.pow(item, arr.length)),
+      0
+    )
+    ? true
+    : false
 }
 
-//   return [...a, ...b].filter((item, index, arr) => item)
-console.log(arrayDiff([1, 2, 2], [1]))
+console.log(narcissistic(153))
