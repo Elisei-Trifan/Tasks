@@ -141,18 +141,18 @@
 // //   return [...a, ...b].filter((item, index, arr) => item)
 // console.log(arrayDiff([1, 2, 2], [1]))
 
-function narcissistic(value) {
-  const num = [...value.toString()].map(Number)
-  return value ===
-    num.reduce(
-      (acc, item, _, arr) => (acc = acc + Math.pow(item, arr.length)),
-      0
-    )
-    ? true
-    : false
-}
+// function narcissistic(value) {
+//   const num = [...value.toString()].map(Number)
+//   return value ===
+//     num.reduce(
+//       (acc, item, _, arr) => (acc = acc + Math.pow(item, arr.length)),
+//       0
+//     )
+//     ? true
+//     : false
+// }
 
-console.log(narcissistic(153))
+// console.log(narcissistic(153))
 
 // function count(string) {
 //   let count = {}
@@ -162,12 +162,28 @@ console.log(narcissistic(153))
 //   return count
 // }
 
-function count(string) {
-  let count = {}
-  string
-    .split('')
-    .forEach((item) => (count[item] ? count[item]++ : (count[item] = 1)))
-  return count
+// function count(string) {
+//   let count = {}
+//   string
+//     .split('')
+//     .forEach((item) => (count[item] ? count[item]++ : (count[item] = 1)))
+//   return count
+// }
+
+// console.log(count2('ппривет'))
+
+function sumOfRoots(a, b, c) {
+  const discriminant = b ** 2 - 4 * a * c
+
+  if (discriminant < 0) {
+    return null
+  }
+
+  const a1 = (-b + Math.sqrt(discriminant)) / (2 * a)
+  const a2 = (-b - Math.sqrt(discriminant)) / (2 * a)
+
+  const sum = a1 + a2
+  return parseFloat(sum.toFixed(2))
 }
 
-console.log(count2('ппривет'))
+console.log(sumOfRoots(1, -11, 30))
