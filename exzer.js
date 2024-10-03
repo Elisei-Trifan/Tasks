@@ -172,18 +172,43 @@
 
 // console.log(count2('ппривет'))
 
-function sumOfRoots(a, b, c) {
-  const discriminant = b ** 2 - 4 * a * c
+// function sumOfRoots(a, b, c) {
+//   const discriminant = b ** 2 - 4 * a * c
 
-  if (discriminant < 0) {
-    return null
-  }
+//   if (discriminant < 0) {
+//     return null
+//   }
 
-  const a1 = (-b + Math.sqrt(discriminant)) / (2 * a)
-  const a2 = (-b - Math.sqrt(discriminant)) / (2 * a)
+//   const a1 = (-b + Math.sqrt(discriminant)) / (2 * a)
+//   const a2 = (-b - Math.sqrt(discriminant)) / (2 * a)
 
-  const sum = a1 + a2
-  return parseFloat(sum.toFixed(2))
+//   const sum = a1 + a2
+//   return parseFloat(sum.toFixed(2))
+// }
+
+// console.log(sumOfRoots(1, -11, 30))
+
+const a = {
+  x: 3,
+  y: 3,
 }
 
-console.log(sumOfRoots(1, -11, 30))
+const b = {
+  x: 3,
+  y: 2,
+}
+
+// function distanceBetweenPoints(a, b) {
+//   let aa = Object.values(a)
+//   let bb = Object.values(b)
+//   const cc = Math.pow(aa[0] - bb[0], 2)
+//   const dd = Math.pow(aa[1] - bb[1], 2)
+
+//   return Math.sqrt(cc + dd)
+// }
+
+function distanceBetweenPoints(a, b) {
+  return Math.sqrt(Math.pow(a.x - b.x, 2) + Math.pow(a.y - b.y, 2))
+}
+
+console.log(distanceBetweenPoints(a, b))
