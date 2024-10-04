@@ -188,15 +188,15 @@
 
 // console.log(sumOfRoots(1, -11, 30))
 
-const a = {
-  x: 3,
-  y: 3,
-}
+// const a = {
+//   x: 3,
+//   y: 3,
+// }
 
-const b = {
-  x: 3,
-  y: 2,
-}
+// const b = {
+//   x: 3,
+//   y: 2,
+// }
 
 // function distanceBetweenPoints(a, b) {
 //   let aa = Object.values(a)
@@ -240,8 +240,20 @@ const b = {
 
 // console.log(points(game))
 
-function stringToArray(string) {
-  return string.split(' ')
-}
+// function stringToArray(string) {
+//   return string.split(' ')
+// }
 
-console.log(stringToArray('dfwsds dvsdvs aefdvsdz sdvszdv aevqa'))
+// console.log(stringToArray('dfwsds dvsdvs aefdvsdz sdvszdv aevqa'))
+
+function countSheeps(sheep) {
+  let count = 0
+  sheep.map((item) => {
+    if (item === true) {
+      count += 1
+    } else if (item === null || undefined) {
+      count += 0
+    }
+  })
+  return count
+}
