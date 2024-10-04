@@ -207,8 +207,23 @@ const b = {
 //   return Math.sqrt(cc + dd)
 // }
 
-function distanceBetweenPoints(a, b) {
-  return Math.sqrt(Math.pow(a.x - b.x, 2) + Math.pow(a.y - b.y, 2))
+// function distanceBetweenPoints(a, b) {
+//   return Math.sqrt(Math.pow(a.x - b.x, 2) + Math.pow(a.y - b.y, 2))
+// }
+
+// console.log(distanceBetweenPoints(a, b))
+
+function abbrevName(name) {
+  return name
+    .split(' ')
+    .map((item) => item[0].toUpperCase())
+    .join('.')
 }
 
-console.log(distanceBetweenPoints(a, b))
+console.log(abbrevName('Trifan elisei'))
+
+// ["3:1", "2:2", "0:1", ...]
+
+// function points(games) {
+//     return
+//   }
