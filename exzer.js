@@ -222,20 +222,26 @@ const b = {
 
 // console.log(abbrevName('Trifan elisei'))
 
-const game = ['3:1', '2:2', '2:1']
+// const game = ['3:1', '2:2', '2:1']
 
-function points(games) {
-  let points = 0
-  games.map((item) => {
-    if (item[0] > item[2]) {
-      points += 3
-    } else if (item[0] < item[2]) {
-      points += 0
-    } else if ((item[0] = item[2])) {
-      points += 1
-    }
-  })
-  return points
+// function points(games) {
+//   let points = 0
+//   games.map((item) => {
+//     if (item[0] > item[2]) {
+//       points += 3
+//     } else if (item[0] < item[2]) {
+//       points += 0
+//     } else if ((item[0] = item[2])) {
+//       points += 1
+//     }
+//   })
+//   return points
+// }
+
+// console.log(points(game))
+
+function stringToArray(string) {
+  return string.split(' ')
 }
 
-console.log(points(game))
+console.log(stringToArray('dfwsds dvsdvs aefdvsdz sdvszdv aevqa'))
