@@ -188,130 +188,136 @@
 
 // console.log(sumOfRoots(1, -11, 30))
 
-// const a = {
-//   x: 3,
-//   y: 3,
-// }
+/* const a = {
+  x: 3,
+  y: 3,
+}
 
-// const b = {
-//   x: 3,
-//   y: 2,
-// }
+const b = {
+  x: 3,
+  y: 2,
+}
 
-// function distanceBetweenPoints(a, b) {
-//   let aa = Object.values(a)
-//   let bb = Object.values(b)
-//   const cc = Math.pow(aa[0] - bb[0], 2)
-//   const dd = Math.pow(aa[1] - bb[1], 2)
+function distanceBetweenPoints(a, b) {
+  let aa = Object.values(a)
+  let bb = Object.values(b)
+  const cc = Math.pow(aa[0] - bb[0], 2)
+  const dd = Math.pow(aa[1] - bb[1], 2)
 
-//   return Math.sqrt(cc + dd)
-// }
+  return Math.sqrt(cc + dd)
+} */
 
-// function distanceBetweenPoints(a, b) {
-//   return Math.sqrt(Math.pow(a.x - b.x, 2) + Math.pow(a.y - b.y, 2))
-// }
+/* function distanceBetweenPoints(a, b) {
+  return Math.sqrt(Math.pow(a.x - b.x, 2) + Math.pow(a.y - b.y, 2))
+}
 
-// console.log(distanceBetweenPoints(a, b))
+console.log(distanceBetweenPoints(a, b)) */
 
-// function abbrevName(name) {
-//   return name
-//     .split(' ')
-//     .map((item) => item[0].toUpperCase())
-//     .join('.')
-// }
+/* function abbrevName(name) {
+  return name
+    .split(' ')
+    .map((item) => item[0].toUpperCase())
+    .join('.')
+}
 
-// console.log(abbrevName('Trifan elisei'))
+console.log(abbrevName('Trifan elisei')) */
 
-// const game = ['3:1', '2:2', '2:1']
+/* const game = ['3:1', '2:2', '2:1']
 
-// function points(games) {
-//   let points = 0
-//   games.map((item) => {
-//     if (item[0] > item[2]) {
-//       points += 3
-//     } else if (item[0] < item[2]) {
-//       points += 0
-//     } else if ((item[0] = item[2])) {
-//       points += 1
-//     }
-//   })
-//   return points
-// }
+function points(games) {
+  let points = 0
+  games.map((item) => {
+    if (item[0] > item[2]) {
+      points += 3
+    } else if (item[0] < item[2]) {
+      points += 0
+    } else if ((item[0] = item[2])) {
+      points += 1
+    }
+  })
+  return points
+}
 
-// console.log(points(game))
+console.log(points(game)) */
 
-// function stringToArray(string) {
-//   return string.split(' ')
-// }
+/* function stringToArray(string) {
+  return string.split(' ')
+}
 
-// console.log(stringToArray('dfwsds dvsdvs aefdvsdz sdvszdv aevqa'))
+console.log(stringToArray('dfwsds dvsdvs aefdvsdz sdvszdv aevqa')) */
 
-// function countSheeps(sheep) {
-//   let count = 0
-//   sheep.map((item) => {
-//     if (item === true) {
-//       count += 1
-//     } else if (item === null || undefined) {
-//       count += 0
-//     }
-//   })
-//   return count
-// }
+/* function countSheeps(sheep) {
+  let count = 0
+  sheep.map((item) => {
+    if (item === true) {
+      count += 1
+    } else if (item === null || undefined) {
+      count += 0
+    }
+  })
+  return count
+} */
 
-// function testEven(n) {
-//   if (n % 2 === 0) {
-//     return true
-//   } else {
-//     return false
-//   }
-// }
+/*function testEven(n) {
+  if (n % 2 === 0) {
+    return true
+  } else {
+    return false
+  }
+}*/
 
-// "scissors", "paper" --> "Player 1 won!"
-// "scissors", "rock" --> "Player 2 won!"
-// "paper", "paper" --> "Draw!"
+/* "scissors", "paper" --> "Player 1 won!"
+"scissors", "rock" --> "Player 2 won!"
+"paper", "paper" --> "Draw!"
 
-// const rps = (p1, p2) => {
-//   if (p1 === p2) {
-//     return 'Draw!'
-//   }
+const rps = (p1, p2) => {
+  if (p1 === p2) {
+    return 'Draw!'
+  }
 
-//   if (
-//     (p1 === 'rock' && p2 === 'scissors') ||
-//     (p1 === 'scissors' && p2 === 'paper') ||
-//     (p1 === 'paper' && p2 === 'rock')
-//   ) {
-//     return 'Player 1 won!'
-//   } else {
-//     return 'Player 2 won!'
-//   }
-// }
+  if (
+    (p1 === 'rock' && p2 === 'scissors') ||
+    (p1 === 'scissors' && p2 === 'paper') ||
+    (p1 === 'paper' && p2 === 'rock')
+  ) {
+    return 'Player 1 won!'
+  } else {
+    return 'Player 2 won!'
+  }
+} */
 
-// class Circle {
-//   constructor(center, radius) {
-//     this.center = center
-//     this.radius = radius
-//   }
-// }
+/*class Circle {
+  constructor(center, radius) {
+    this.center = center
+    this.radius = radius
+  }
+}
 
-// class Point {
-//   constructor(x, y) {
-//     this.x = x
-//     this.y = y
-//   }
-// }
+class Point {
+  constructor(x, y) {
+    this.x = x
+    this.y = y
+  }
+}
 
-// function circleArea(circle) {
-//   return Math.PI * Math.pow(circle.radius, 2)
-// }
+function circleArea(circle) {
+  return Math.PI * Math.pow(circle.radius, 2)
+}*/
 
-// function removeEveryOther(arr) {
-//   let a = []
-//   arr.map((item, index) => (index % 2 === 0 ? a.push(item) : false))
-//   return a
-// }
+/*function removeEveryOther(arr) {
+  let a = []
+  arr.map((item, index) => (index % 2 === 0 ? a.push(item) : false))
+  return a
+}
 
 function removeEveryOther(arr) {
   return arr.filter((_, index) => index % 2 === 0)
 }
 
-console.log(removeEveryOther(['Keep', 'Remove', 'Keep', 'Remove', 'Keep']))
+console.log(removeEveryOther(['Keep', 'Remove', 'Keep', 'Remove', 'Keep']))*/
+
+const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+  return distanceToPump >= fuelLeft * mpg
+}
+
+console.log(zeroFuel(50, 25, 2))
