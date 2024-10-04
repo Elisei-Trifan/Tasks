@@ -246,14 +246,22 @@
 
 // console.log(stringToArray('dfwsds dvsdvs aefdvsdz sdvszdv aevqa'))
 
-function countSheeps(sheep) {
-  let count = 0
-  sheep.map((item) => {
-    if (item === true) {
-      count += 1
-    } else if (item === null || undefined) {
-      count += 0
-    }
-  })
-  return count
+// function countSheeps(sheep) {
+//   let count = 0
+//   sheep.map((item) => {
+//     if (item === true) {
+//       count += 1
+//     } else if (item === null || undefined) {
+//       count += 0
+//     }
+//   })
+//   return count
+// }
+
+function testEven(n) {
+  if (n % 2 === 0) {
+    return true
+  } else {
+    return false
+  }
 }
