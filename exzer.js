@@ -286,20 +286,32 @@
 //   }
 // }
 
-class Circle {
-  constructor(center, radius) {
-    this.center = center
-    this.radius = radius
-  }
+// class Circle {
+//   constructor(center, radius) {
+//     this.center = center
+//     this.radius = radius
+//   }
+// }
+
+// class Point {
+//   constructor(x, y) {
+//     this.x = x
+//     this.y = y
+//   }
+// }
+
+// function circleArea(circle) {
+//   return Math.PI * Math.pow(circle.radius, 2)
+// }
+
+// function removeEveryOther(arr) {
+//   let a = []
+//   arr.map((item, index) => (index % 2 === 0 ? a.push(item) : false))
+//   return a
+// }
+
+function removeEveryOther(arr) {
+  return arr.filter((_, index) => index % 2 === 0)
 }
 
-class Point {
-  constructor(x, y) {
-    this.x = x
-    this.y = y
-  }
-}
-
-function circleArea(circle) {
-  return Math.PI * Math.pow(circle.radius, 2)
-}
+console.log(removeEveryOther(['Keep', 'Remove', 'Keep', 'Remove', 'Keep']))
