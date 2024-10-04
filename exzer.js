@@ -213,17 +213,29 @@ const b = {
 
 // console.log(distanceBetweenPoints(a, b))
 
-function abbrevName(name) {
-  return name
-    .split(' ')
-    .map((item) => item[0].toUpperCase())
-    .join('.')
+// function abbrevName(name) {
+//   return name
+//     .split(' ')
+//     .map((item) => item[0].toUpperCase())
+//     .join('.')
+// }
+
+// console.log(abbrevName('Trifan elisei'))
+
+const game = ['3:1', '2:2', '2:1']
+
+function points(games) {
+  let points = 0
+  games.map((item) => {
+    if (item[0] > item[2]) {
+      points += 3
+    } else if (item[0] < item[2]) {
+      points += 0
+    } else if ((item[0] = item[2])) {
+      points += 1
+    }
+  })
+  return points
 }
 
-console.log(abbrevName('Trifan elisei'))
-
-// ["3:1", "2:2", "0:1", ...]
-
-// function points(games) {
-//     return
-//   }
+console.log(points(game))
