@@ -316,8 +316,56 @@ function removeEveryOther(arr) {
 
 console.log(removeEveryOther(['Keep', 'Remove', 'Keep', 'Remove', 'Keep']))*/
 
-const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
+/* const zeroFuel = (distanceToPump, mpg, fuelLeft) => {
   return distanceToPump >= fuelLeft * mpg
 }
 
 console.log(zeroFuel(50, 25, 2))
+ */
+
+/* function toBinary(n) {
+  const binStr = n.toString(2)
+  const d = parseInt(binStr, 10)
+  return d
+}
+
+console.log(toBinary(5)) */
+
+// function createFn(n = 0) {
+//   let count = n
+//   return function () {
+//     count++
+//     console.log(count)
+//   }
+// }
+
+// step1 = createFn()
+// step2 = createFn(5)
+// step1()
+// step1()
+// step2()
+// step1()
+// step1()
+
+function randomInteger(min, max) {
+  let rand = min - 0.5 + Math.random() * (max - min + 1)
+  return Math.round(rand)
+}
+
+// console.log(randomInteger(5, 6))
+
+function createBeggar(n) {
+  let s = n
+  return function beggar(name) {
+    s += randomInteger(0, 100)
+    console.log(s)
+    if (s >= 250) return
+    beggar()
+  }
+}
+
+const beg1 = createBeggar(50)
+const beg2 = createBeggar(30)
+beg1()
+console.log('============')
+beg2()
