@@ -6,3 +6,13 @@
  *
  * 3. Выведите значение второй переменной в консоль
  */
+
+// const str = 'Good Morning'
+
+// const string = str.split(' ')
+// string[1] = 'Evening'
+// console.log(string.join(' '))
+
+const str = 'Good Morning'
+const string = str.replace('Morning', 'Evening')
+console.log(string)

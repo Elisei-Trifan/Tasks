@@ -4,3 +4,7 @@
  *
  * 2. Виведите в консоль длину этой строки
  */
+
+const string = 'hello elisei trifan'
+
+console.log(string.length)
