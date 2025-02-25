@@ -366,9 +366,9 @@ function createBeggar(n) {
 
 const beg1 = createBeggar(50)
 const beg2 = createBeggar(30)
-beg1()
-console.log('============')
-beg2()
+// beg1()
+// console.log('============')
+// beg2()
 
 // const name1 = 'Mozilla'
 // function init() {
@@ -393,11 +393,32 @@ function init2() {
   displayName2()
 }
 
-init2()
+// init2()
 
 function randomInteger(min, max) {
   let rand = min - 0.5 + Math.random() * (max - min + 1)
   return Math.round(rand)
 }
 
-// const str
+const str5 = '(()()(()))[]{{}}}'
+function checkBrackets(str) {
+  let stack = []
+  const obj = {
+    '(': ')',
+    '{': '}',
+    '[': ']',
+  }
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === '(' || str[i] === '{' || str[i] === '[') {
+      stack.push(str[i])
+    } else {
+      const lastEl = stack.pop()
+      if (str[i] !== obj[lastEl]) {
+        return false
+      }
+    }
+  }
+  if (stack.length !== 0) return false
+  return true
+}
+console.log(checkBrackets(str5))
