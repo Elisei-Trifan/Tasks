@@ -369,3 +369,35 @@ const beg2 = createBeggar(30)
 beg1()
 console.log('============')
 beg2()
+
+// const name1 = 'Mozilla'
+// function init() {
+//   // name - локальная переменная, созданная в init
+//   function displayName() {
+//     // displayName() - внутренняя функция, замыкание
+//     alert(name1) // displayName() использует переменную, объявленную в родительской функции
+//   }
+//   displayName()
+// }
+// init()
+
+const name2 = 'Chrome'
+
+function init2() {
+  function displayName2() {
+    function displayName3() {
+      alert(name2)
+    }
+    displayName3()
+  }
+  displayName2()
+}
+
+init2()
+
+function randomInteger(min, max) {
+  let rand = min - 0.5 + Math.random() * (max - min + 1)
+  return Math.round(rand)
+}
+
+// const str
