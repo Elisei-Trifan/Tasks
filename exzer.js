@@ -421,4 +421,29 @@ function checkBrackets(str) {
   if (stack.length !== 0) return false
   return true
 }
-console.log(checkBrackets(str5))
+// console.log(checkBrackets(str5))
+
+console.log('Начало ')
+
+const p1 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    const backend = {
+      server: 2000,
+      app: false,
+    }
+
+    resolve(backend)
+  }, 2000)
+})
+
+p1.then((dara) => {
+  console.log('Данные получены', dara)
+  return new Promise((resolve, reject) => {
+    setTimeout(() => {
+      dara.modify = true
+      resolve(dara)
+    }, 4000)
+  })
+}).then((daramod) => {
+  console.log('Модифицированные данные', daramod)
+})
