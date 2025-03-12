@@ -423,7 +423,7 @@ function checkBrackets(str) {
 }
 // console.log(checkBrackets(str5))
 
-console.log('Начало ')
+// console.log('Начало ')
 
 const p1 = new Promise((resolve, reject) => {
   setTimeout(() => {
@@ -437,13 +437,21 @@ const p1 = new Promise((resolve, reject) => {
 })
 
 p1.then((dara) => {
-  console.log('Данные получены', dara)
+  // console.log('Данные получены', dara)
   return new Promise((resolve, reject) => {
     setTimeout(() => {
       dara.modify = true
       resolve(dara)
     }, 4000)
   })
-}).then((daramod) => {
-  console.log('Модифицированные данные', daramod)
 })
+  .then((daramod) => {
+    // console.log('Модифицированные данные', daramod)
+  })
+  .catch((err) => {
+    // console.error('Ошибка', err)
+  })
+
+fetch('https://jsonplaceholder.typicode.com/posts')
+  .then((data) => data.json())
+  .then((data2) => console.log(data2))
